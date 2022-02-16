@@ -1,3 +1,5 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;500&display=swap");
 body {
   display: flex;
   flex-direction: column;
@@ -5,10 +7,12 @@ body {
   margin: 0;
   padding: 0;
   overflow: hidden scroll;
+  font-family: "Roboto";
+  font-weight: 300;
 }
 body .navbar {
   display: grid;
-  grid-template-columns: repeat(3, 35% 30% 35%);
+  grid-template-columns: repeat(3, 1fr);
   place-items: center;
 }
 body .navbar h2 {
@@ -78,6 +82,7 @@ body .website-items {
   place-items: center;
   position: relative;
   width: 100%;
+  margin-bottom: 15rem;
 }
 body .website-items .item {
   display: grid;
@@ -121,9 +126,7 @@ body .website-items .item-cards {
 }
 body .website-items .item-cards .card {
   background-color: white;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
+  width: 15rem;
   height: 19rem;
   padding: 0.3rem;
 }
@@ -133,7 +136,7 @@ body .website-items .item-cards .card .in-line {
   padding: 0.2rem;
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
+  justify-content: space-between;
   font-weight: bold;
   font-size: 18px;
 }
@@ -142,10 +145,252 @@ body .website-items .item-cards .card .in-line a {
   color: orangered;
   margin-top: 0.5rem;
 }
+body .website-items .item-cards .card .in-line a .link {
+  margin-left: 0.5rem;
+  width: 0.75rem;
+  fill: orangered;
+}
+body .website-items .item-cards .card .in-line .image {
+  width: 100%;
+  height: 70%;
+}
+body .reviews {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .reviews p {
+  color: orangered;
+}
+body .reviews h2 {
+  margin: 0;
+  margin-bottom: 2rem;
+  width: 30ch;
+  text-align: center;
+}
+body .reviews .comments {
+  display: grid;
+  grid-template-columns: repeat(4, 20%);
+  place-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+body .reviews .comments .comment-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+body .reviews .comments .comment-card .comment-icon {
+  background-color: orangered;
+  width: 2rem;
+  aspect-ratio: 1/1;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-size: larger;
+  font-weight: 500;
+}
+body .reviews .comments .comment-card .comment-icon .quote-icon {
+  width: 15px;
+}
+body .reviews .comments .comment-card p {
+  text-align: center;
+  color: black;
+}
+body .reviews .comments .comment-card p:nth-of-type(2) {
+  margin: 0;
+  font-weight: 500;
+}
+body .reviews .comments .comment-card p:nth-of-type(3) {
+  margin: 0;
+}
+body .reviews .comments .comment-card:nth-child(2) .comment-icon, body .reviews .comments .comment-card:nth-child(4) .comment-icon {
+  background-color: rgba(255, 68, 0, 0.537);
+}
+body .subscription {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5rem;
+}
+body .subscription p:first-of-type {
+  margin: 0;
+  color: orangered;
+}
+body .subscription h2 {
+  margin: 1rem;
+}
+body .subscription .packages {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+body .subscription .packages .package-card {
+  height: 25rem;
+  justify-content: space-between;
+  width: 18rem;
+  box-shadow: 0 0 5px 2px rgba(122, 121, 121, 0.231);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  position: relative;
+}
+body .subscription .packages .package-card p {
+  width: 30ch;
+  text-align: center;
+}
+body .subscription .packages .package-card .color {
+  position: absolute;
+  width: 100%;
+  height: 45%;
+  background-color: orangered;
+  z-index: -1;
+  top: 0;
+}
+body .subscription .packages .package-card:nth-child(1) h2, body .subscription .packages .package-card:nth-child(1) h3 {
+  margin: 0;
+}
+body .subscription .packages .package-card:nth-child(1) p:nth-of-type(1), body .subscription .packages .package-card:nth-child(1) p:nth-of-type(2) {
+  margin: 0;
+}
+body .subscription .packages .package-card:nth-child(1) p:nth-of-type(3), body .subscription .packages .package-card:nth-child(1) p:nth-of-type(4) {
+  margin: 0.5rem;
+}
+body .subscription .packages .package-card:nth-child(1) p:nth-of-type(3)::before, body .subscription .packages .package-card:nth-child(1) p:nth-of-type(4)::before {
+  content: "✔ ";
+}
+body .subscription .packages .package-card:nth-child(1) p:nth-of-type(5), body .subscription .packages .package-card:nth-child(1) p:nth-of-type(6) {
+  margin: 0.5rem;
+  margin-left: 1.5rem;
+  opacity: 0.3;
+}
+body .subscription .packages .package-card:nth-child(2) h2, body .subscription .packages .package-card:nth-child(2) h3 {
+  color: white;
+  margin: 0;
+}
+body .subscription .packages .package-card:nth-child(2) hr {
+  display: none;
+}
+body .subscription .packages .package-card:nth-child(2) p:nth-of-type(1), body .subscription .packages .package-card:nth-child(2) p:nth-of-type(2) {
+  color: white;
+  margin: 0;
+}
+body .subscription .packages .package-card:nth-child(2) p:nth-of-type(3), body .subscription .packages .package-card:nth-child(2) p:nth-of-type(4), body .subscription .packages .package-card:nth-child(2) p:nth-of-type(5) {
+  margin: 0.5rem;
+}
+body .subscription .packages .package-card:nth-child(2) p:nth-of-type(3)::before, body .subscription .packages .package-card:nth-child(2) p:nth-of-type(4)::before, body .subscription .packages .package-card:nth-child(2) p:nth-of-type(5)::before {
+  content: "✔ ";
+}
+body .subscription .packages .package-card:nth-child(2) p:nth-of-type(6) {
+  margin: 0.5rem;
+  margin-left: 1.5rem;
+  opacity: 0.3;
+}
+body .subscription .packages .package-card:nth-child(2) button {
+  background-color: orangered;
+  color: white;
+}
+body .subscription .packages .package-card:nth-child(3) h2 {
+  margin: 0;
+}
+body .subscription .packages .package-card:nth-child(3) h3 {
+  margin: 0;
+}
+body .subscription .packages .package-card:nth-child(3) p:nth-of-type(1), body .subscription .packages .package-card:nth-child(3) p:nth-of-type(2) {
+  color: black;
+  margin: 0;
+}
+body .subscription .packages .package-card:nth-child(3) p:nth-of-type(3), body .subscription .packages .package-card:nth-child(3) p:nth-of-type(4), body .subscription .packages .package-card:nth-child(3) p:nth-of-type(5), body .subscription .packages .package-card:nth-child(3) p:nth-of-type(6) {
+  margin: 0.5rem;
+}
+body .subscription .packages .package-card:nth-child(3) p:nth-of-type(3)::before, body .subscription .packages .package-card:nth-child(3) p:nth-of-type(4)::before, body .subscription .packages .package-card:nth-child(3) p:nth-of-type(5)::before, body .subscription .packages .package-card:nth-child(3) p:nth-of-type(6)::before {
+  content: "✔ ";
+}
+body .subscription .packages .package-card button {
+  width: 10rem;
+  height: 2rem;
+  background-color: white;
+  border: 1px solid orangered;
+  color: orangered;
+}
+body .documentation {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  justify-content: center;
+  margin-top: 2rem;
+}
+body .documentation .doc {
+  padding: 5rem;
+  background-color: orangered;
+  color: white;
+}
+body .documentation .doc p {
+  width: 40ch;
+}
+body .documentation .doc button {
+  height: 2rem;
+  background-color: white;
+  color: orangered;
+  border: none;
+}
+body .documentation .sdk {
+  padding: 5rem;
+  background-color: rgba(255, 68, 0, 0.633);
+  color: white;
+}
+body .documentation .sdk p {
+  width: 40ch;
+}
+body .documentation .sdk button {
+  height: 2rem;
+  background-color: white;
+  color: orangered;
+  border: none;
+}
+body .follow-us {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 2rem;
+}
+body .follow-us .social-icons {
+  display: flex;
+  flex-direction: row;
+  gap: 3rem;
+}
+body .follow-us .social-icons .icons {
+  width: 2rem;
+  aspect-ratio: 1/1;
+}
+body .footer {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  background-color: gray;
+  padding: 3rem;
+}
+body .footer .features {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+body .footer .features h3 {
+  margin: 0;
+  margin-left: 2.2rem;
+}
+body .footer .features ul {
+  list-style: none;
+  margin: 0;
+}
 body::-webkit-scrollbar {
   width: 0.5rem;
 }
 body::-webkit-scrollbar-thumb {
-  background-color: orangered;
+  background-color: black;
   border-radius: 6px;
 }/*# sourceMappingURL=style.css.map */
